@@ -13,11 +13,11 @@ categories = ["rust-patterns", "development-tools::testing"]
 [features]
 default = ["std"]
 unimock = ["dep:unimock"]
-std = []
+std = ["implementation/std"]
 
 [dependencies]
 entrait_macros = { path = "entrait_macros", version = "0.7.0" }
-implementation = "0.1"
+implementation = { version = "0.1", default_features = false }
 unimock = { version = "0.6.2", optional = true }
 
 [dev-dependencies]
@@ -36,3 +36,7 @@ features = ["unimock"]
 
 [workspace]
 members = ["entrait_macros", "examples/async-graphql", "examples/axum"]
+
+[patch.crates-io]
+# we have our own no_std compatible version of implementation, a dependency of entrait
+implementation = { git = "https://github.com/ibexus-platform/implementation", default_features = false }
