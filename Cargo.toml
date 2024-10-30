@@ -11,7 +11,7 @@ keywords = ["pattern", "ioc", "inversion-of-control", "di", "macro"]
 categories = ["rust-patterns", "development-tools::testing"]
 
 [features]
-default = []
+default = ["std"]
 unimock = ["dep:unimock"]
 std = []
 
