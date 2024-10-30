@@ -13,6 +13,7 @@ categories = ["rust-patterns", "development-tools::testing"]
 [features]
 default = []
 unimock = ["dep:unimock"]
+std = []
 
 [dependencies]
 entrait_macros = { path = "entrait_macros", version = "0.7.0" }
@@ -34,8 +35,4 @@ doctest = false
 features = ["unimock"]
 
 [workspace]
-members = [
-    "entrait_macros",
-    "examples/async-graphql",
-    "examples/axum"
-]
+members = ["entrait_macros", "examples/async-graphql", "examples/axum"]

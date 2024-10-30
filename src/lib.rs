@@ -1,3 +1,5 @@
+#![cfg_attr(not(feature = "std"), no_std)]
+
 //! A proc macro for designing loosely coupled Rust applications.
 //!
 //! [`entrait`](entrait) is used to generate an _implemented trait_ from the definition of regular functions.
